@@ -1,0 +1,56 @@
+<app-top-bar></app-top-bar>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<div class="card-top container-fluid">
+  <div class="container d-flex">
+    <div class="category">
+      <a>
+        <img
+          src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Beauty_1x._SY304_CB432774351_.jpg"
+          alt=""
+        />
+        <h6>Beauty picks</h6>
+      </a>
+    </div>
+    <div class="category">
+      <a>
+        <img
+          src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._SY304_CB627424361_.jpg"
+          alt=""
+        />
+        <h6>Health & Personal Care</h6>
+      </a>
+    </div>
+    <div class="category">
+      <a>
+        <img
+          src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Laptops_379x304_1X_en_US._SY304_CB418608471_.jpg"
+          alt=""
+        />
+        <h6>Shop Laptops & Tablets</h6>
+      </a>
+    </div>
+    <div class="category">
+      <a>
+        <img
+          src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
+          alt=""
+        />
+        <h6>Electronics</h6>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="items-filter">
+  <div *ngIf="let category of categories">
+    <a (click)="filterItemsByCategory(category)">{{ categories.category }}</a>
+  </div>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
